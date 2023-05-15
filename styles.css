@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,600&display=swap");
+
+:root {
+  --color-white: hsl(252, 30%, 100%);
+  --color-background: #6725f5;
+  --color-quote: #9666ff;
+  --container-padding: 2rem;
+  --container-radius: 0.5rem;
+  --quote-padding: 1rem;
+  --quote-font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 31%;
+  background: var(--color-quote);
+  padding: var(--container-padding);
+  border-radius: var(--container-radius);
+  height: 30%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: var(--quote-font-family);
+  color: var(--color-white);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+p i {
+  font-size: 2rem;
+}
+.fa-quote-left {
+  position: relative;
+  top: -20px;
+  margin-right: 5px;
+}
+
+.fa-quote-right {
+  position: relative;
+  bottom: -20px;
+  margin-left: 5px;
+}
+.author {
+  font-family: var(--quote-font-family);
+  color: #24036b;
+}
+.btn {
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+}
+.btn button {
+  color: var(--color-white);
+  border: none;
+  background: #ec8a09;
+  border-radius: 10px;
+  padding: var(--quote-padding);
+  cursor: pointer;
+}
+
+.copy-quote {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  border-bottom-left-radius: 5px;
+  font-family: var(--quote-font-family);
+  font-size: 0.8rem;
+  color: rgb(255, 255, 255);
+  background: #bca0f8;
+  padding: 0.6rem;
+  width: 25%;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 70%;
+    height: auto;
+    margin: auto;
+  }
+}
