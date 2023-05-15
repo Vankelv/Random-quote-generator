@@ -20,29 +20,23 @@ body {
 }
 
 .container {
-  width: 31%;
+  position: relative;
+  width: 30%;
   background: var(--color-quote);
   padding: var(--container-padding);
   border-radius: var(--container-radius);
-  height: 30%;
   position: relative;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
-
-.card {
-  background-color: #f0f0f0;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.quote {
+  background: var(--color-quote); /* Apply the same background as container */
+  padding: 0.1rem; /* Apply the same padding as container */
+  border-radius: var(
+    --container-radius
+  ); /* Apply the same border radius as container */
 }
-
-h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
 p {
   font-family: var(--quote-font-family);
   color: var(--color-white);
@@ -55,13 +49,13 @@ p i {
 }
 .fa-quote-left {
   position: relative;
-  top: -20px;
+  top: -10px;
   margin-right: 5px;
 }
 
 .fa-quote-right {
   position: relative;
-  bottom: -20px;
+  bottom: -10px;
   margin-left: 5px;
 }
 .author {
@@ -69,34 +63,50 @@ p i {
   color: #24036b;
 }
 .btn {
+  display: flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 10px;
+  gap: 1rem;
 }
 .btn button {
-  color: var(--color-white);
-  border: none;
-  background: #ec8a09;
-  border-radius: 10px;
-  padding: var(--quote-padding);
+  /* color: var(--color-white); */
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: var(--quote-font-family);
+  font-size: 0.5rem;
+}
+button i,
+#export-button i {
+  font-size: 1rem;
+  color: white;
+}
+#export-button {
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
   cursor: pointer;
 }
-
 .copy-quote {
-  position: absolute;
-  top: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
-  right: 0;
-  border-bottom-left-radius: 5px;
-  font-family: var(--quote-font-family);
-  font-size: 0.8rem;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
   color: rgb(255, 255, 255);
-  background: #bca0f8;
-  padding: 0.6rem;
-  width: 25%;
   cursor: pointer;
+}
+.copy-quote i {
+  margin-right: 5px;
 }
 
 @media (max-width: 768px) {

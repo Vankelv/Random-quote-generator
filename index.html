@@ -11,25 +11,37 @@
       crossorigin="anonymous"
     ></script>
     <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
   </head>
   <body>
     <div class="container">
-      <div class="copy-quote">
-        <i class="fa-regular fa-clipboard"></i><span> Copy</span>
-      </div>
-      <div class="quote">
-        <blockquote>
-          <p id="quote">
-            <i class="fa fa-quote-left"></i> This is the quoted text. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit.<i
-              class="fa fa-quote-right"
-            ></i>
-          </p>
-          <h4 class="author">— John Doe</h4>
-        </blockquote>
+      <div class="quotes">
+        <div class="quote">
+          <blockquote>
+            <p id="quote">
+              <i class="fa fa-quote-left"></i> This is the quoted text. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit.<i
+                class="fa fa-quote-right"
+              ></i>
+            </p>
+            <h4 class="author">— John Doe</h4>
+          </blockquote>
+        </div>
       </div>
       <div class="btn">
-        <button>Get new Quote</button>
+        <div class="copy-quote">
+          <i class="fa-regular fa-copy"></i><span class="copy"></span>
+        </div>
+        <div>
+          <button><i class="fa fa-play"></i></button>
+        </div>
+        <span class="btn" id="export-button"
+          ><i class="fa-solid fa-image"></i
+        ></span>
       </div>
     </div>
   </body>
