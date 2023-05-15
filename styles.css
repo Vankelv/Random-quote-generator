@@ -47,6 +47,9 @@ p {
 p i {
   font-size: 2rem;
 }
+#text {
+  padding-top: 20px;
+}
 .fa-quote-left {
   position: relative;
   top: -10px;
@@ -81,11 +84,13 @@ p i {
   font-size: 0.5rem;
 }
 button i,
-#export-button i {
+#export-button i,
+#customizer i {
   font-size: 1rem;
   color: white;
 }
-#export-button {
+#export-button,
+#customizer {
   width: 3rem;
   height: 3rem;
   background: transparent;

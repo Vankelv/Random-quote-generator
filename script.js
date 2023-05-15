@@ -105,3 +105,36 @@ function exportAsImage() {
 
 const exportButton = document.querySelector("#export-button");
 exportButton.addEventListener("click", exportAsImage);
+
+// customizer
+
+// Select the container and quote elements
+const containerElement = document.querySelector(".container");
+const quotesElement = document.querySelector(".quote");
+
+// Select the customizer button
+const customizerButton = document.querySelector("#customizer");
+
+// Function to handle color customization
+function openColorPicker() {
+  // Create a color input element
+  const colorInput = document.createElement("input");
+  colorInput.type = "color";
+
+  // Function to apply the selected color
+  function applyColor() {
+    const selectedColor = colorInput.value;
+    containerElement.style.backgroundColor = selectedColor;
+    quoteElement.style.backgroundColor = selectedColor;
+    quotesElement.style.backgroundColor = selectedColor;
+  }
+
+  // Event listener for color input change
+  colorInput.addEventListener("input", applyColor);
+
+  // Programmatically click the color input to trigger the color picker
+  colorInput.click();
+}
+
+// Event listener for customizer button click
+customizerButton.addEventListener("click", openColorPicker);
