@@ -66,7 +66,7 @@ copyQuoteButton.addEventListener("click", CopyToClipBoard);
 //Export quote as image
 
 function exportAsImage() {
-  const container = document.querySelector(".quote");
+  const container = document.querySelector(".container");
   const containerWidth = container.offsetWidth;
   const containerHeight = container.offsetHeight;
 

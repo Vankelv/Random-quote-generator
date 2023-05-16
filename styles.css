@@ -8,35 +8,47 @@
   --container-radius: 0.5rem;
   --quote-padding: 1rem;
   --quote-font-family: "Poppins", sans-serif;
+  --primary: #49654D;
+--secondary: #8BA989;
+--white: #FFFFFF;
+--light: #C0CFB2;
+--dark: #364F3C;
 }
 
 body {
-  background: var(--color-background);
+  /* background: var(--color-background); */
+  background: linear-gradient(145deg, #5289e2, #61a3ff);
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  gap: 2rem;
   margin: 0;
 }
 
 .container {
   position: relative;
   width: 30%;
-  background: var(--color-quote);
+  border-radius: 50px;
+  box-shadow: 35px 35px 70px #4d81d5,
+    -35px -35px 70px #69afff;
   padding: var(--container-padding);
-  border-radius: var(--container-radius);
+  /* border-radius: var(--container-radius); */
   position: relative;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
+
 .quote {
-  background: var(--color-quote); /* Apply the same background as container */
-  padding: 0.1rem; /* Apply the same padding as container */
-  border-radius: var(
-    --container-radius
-  ); /* Apply the same border radius as container */
+
+  /* Apply the same background as container */
+  padding: 0.1rem;
+  /* Apply the same padding as container */
+  border-radius: var(--container-radius);
+  /* Apply the same border radius as container */
 }
+
 p {
   font-family: var(--quote-font-family);
   color: var(--color-white);
@@ -47,9 +59,11 @@ p {
 p i {
   font-size: 2rem;
 }
+
 #text {
   padding-top: 20px;
 }
+
 .fa-quote-left {
   position: relative;
   top: -10px;
@@ -61,10 +75,12 @@ p i {
   bottom: -10px;
   margin-left: 5px;
 }
+
 .author {
   font-family: var(--quote-font-family);
   color: #24036b;
 }
+
 .btn {
   display: flex;
   justify-content: center;
@@ -72,6 +88,7 @@ p i {
   text-align: center;
   gap: 1rem;
 }
+
 .btn button {
   /* color: var(--color-white); */
   width: 3rem;
@@ -83,12 +100,14 @@ p i {
   font-family: var(--quote-font-family);
   font-size: 0.5rem;
 }
+
 button i,
 #export-button i,
 #customizer i {
   font-size: 1rem;
   color: white;
 }
+
 #export-button,
 #customizer {
   width: 3rem;
@@ -98,6 +117,7 @@ button i,
   border-radius: 50%;
   cursor: pointer;
 }
+
 .copy-quote {
   display: flex;
   justify-content: center;
@@ -110,6 +130,7 @@ button i,
   color: rgb(255, 255, 255);
   cursor: pointer;
 }
+
 .copy-quote i {
   margin-right: 5px;
 }
@@ -121,3 +142,6 @@ button i,
     margin: auto;
   }
 }
+
+
+/* Music player */
