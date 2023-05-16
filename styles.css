@@ -8,11 +8,11 @@
   --container-radius: 0.5rem;
   --quote-padding: 1rem;
   --quote-font-family: "Poppins", sans-serif;
-  --primary: #49654D;
---secondary: #8BA989;
---white: #FFFFFF;
---light: #C0CFB2;
---dark: #364F3C;
+  --primary: #49654d;
+  --secondary: #8ba989;
+  --white: #ffffff;
+  --light: #c0cfb2;
+  --dark: #364f3c;
 }
 
 body {
@@ -26,14 +26,19 @@ body {
   margin: 0;
 }
 
+.weather {
+  display: flex;
+}
+
 .container {
   position: relative;
+  height: 50%;
   width: 30%;
   border-radius: 50px;
-  box-shadow: 35px 35px 70px #4d81d5,
-    -35px -35px 70px #69afff;
+  box-shadow: 35px 35px 70px #4d81d5, -35px -35px 70px #69afff;
   padding: var(--container-padding);
   /* border-radius: var(--container-radius); */
+
   position: relative;
   align-items: center;
   justify-content: center;
@@ -41,7 +46,6 @@ body {
 }
 
 .quote {
-
   /* Apply the same background as container */
   padding: 0.1rem;
   /* Apply the same padding as container */
@@ -135,6 +139,14 @@ button i,
   margin-right: 5px;
 }
 
+input,
+input:checked {
+  background: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+}
+
 @media (max-width: 768px) {
   .container {
     width: 70%;
@@ -142,6 +154,5 @@ button i,
     margin: auto;
   }
 }
-
 
 /* Music player */

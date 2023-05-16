@@ -137,4 +137,37 @@ function openColorPicker() {
 }
 
 // Event listener for customizer button click
-customizerButton.addEventListener("click", openColorPicker);
+// customizerButton.addEventListener("click", openColorPicker);
+
+//weather card
+document
+  .getElementById("weatherForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    const location = document.getElementById("locationInput").value;
+    getWeather(location);
+  });
+
+function getWeather(location) {
+  const apiKey = "2903af511d3baf6677cda8f70031ce9e"; // Replace with your own API key
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(
+    location
+  )}&appid=${apiKey}&units=metric`;
+
+  fetch(apiUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      const temperature = data.main.temp;
+      const city = data.name;
+      const country = data.sys.country;
+      const weatherDescription = data.weather[0].description;
+
+      document.getElementById("temperature").innerHTML = `${temperature}°C`;
+      document.getElementById("location").innerHTML = `${city}, ${country}`;
+    })
+    .catch((error) => {
+      console.log("Error:", error);
+      document.getElementById("temperature").innerHTML =
+        "Error fetching weather";
+    });
+}
