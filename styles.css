@@ -25,20 +25,24 @@ body {
   gap: 2rem;
   margin: 0;
 }
-
+.canva{
+  background: linear-gradient(145deg, #5289e2, #61a3ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
 .weather {
   display: flex;
 }
 
 .container {
   position: relative;
-  height: 50%;
   width: 30%;
   border-radius: 50px;
   box-shadow: 35px 35px 70px #4d81d5, -35px -35px 70px #69afff;
   padding: var(--container-padding);
   /* border-radius: var(--container-radius); */
-
   position: relative;
   align-items: center;
   justify-content: center;
